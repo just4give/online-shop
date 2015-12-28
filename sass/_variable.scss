@@ -1,0 +1,73 @@
+$menu-background-color: #DCA408;
+$menu-color: white;
+$menu-background-shade: #F5E1E1;
+$background-color: #E9E9E9;
+$text-color-primary: #555;
+$secondary-band-color: green;
+
+@mixin box-shadow{
+  -ms-box-shadow: 2px 2px 2px #CCC8C8;
+  -moz-box-shadow: 2px 2px 2px #CCC8C8;
+  -webkit-box-shadow: 2px 2px 2px #CCC8C8;
+  box-shadow: 2px 2px 2px #CCC8C8;
+}
+
+@mixin no-active-focus{
+  &:focus,&:active.focus,&:active:focus{
+    -webkit-box-shadow:none;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    background-color: gray;
+  }
+}
+.btn-opp-primary{
+  color: white;
+  background-color: $secondary-band-color;
+  border-color: $secondary-band-color;
+    &:hover{
+      color: white;
+    background-color: darkgreen;
+  }
+  @include no-active-focus;
+
+}
+.btn-opp-light{
+  color: #635D5D;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+  background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to (rgba(255, 255, 255, 0))) repeat scroll 0 0;
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+  background-color: #E0E0E0;
+  &:hover{
+    color: black;
+  }
+  @include no-active-focus;
+}
+.btn.btn-lg{
+  font-size: large;
+  font-weight: bold;
+}
+
+.btn-trans{
+  background-color: transparent;
+  border-color: transparent;
+  @include no-active-focus;
+}
+.text-x-large{
+  font-size: x-large;
+}
+
+.text-xx-large{
+  font-size: xx-large;
+}
+
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
+
+.margin-bottom-20{
+  margin-bottom: 20px;
+}

@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-3">
+
+    </div>
+
+    <div class="col-sm-9" ng-controller="CarouselDemoCtrl">
+        <div class="carousel-box">
+            <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides" active="slide.active" class="row">
+
+
+                    <div class="col-xs-6 text-box">
+
+                        <h3>{{slide.text}}</h3>
+                        <h5>{{slide.text2}}</h5>
+                        <button class="btn btn-success">{{slide.link.text}}</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <img ng-src="{{slide.image}}" class="img-responsive">
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+        </div>
+
+    </div>
+    <!-- carousel slider -->
+
+</div>

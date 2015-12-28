@@ -1,0 +1,30 @@
+.badge{
+  background-color: $menu-background-color;
+}
+
+.navbar{
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.btn-rect{
+  border-radius: 5px;
+  border: 1px solid #ccc8c8;
+}
+
+.modal{
+  .modal-content{
+    border-radius: 0px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.navbar-inverse .navbar-toggle{
+  border-color: transparent;
+}
