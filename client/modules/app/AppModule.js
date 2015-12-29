@@ -2,7 +2,7 @@
  * Created by mithundas on 12/3/15.
  */
 var appModule = angular.module("photoOrder",['ui.router','ui.bootstrap','ngAnimate', 'ngTouch','mgcrea.ngStrap','angular-confirm',
-    'LocalStorageModule','ngFileUpload','facebook','angular-inview']);
+    'LocalStorageModule','ngFileUpload','facebook','angular-inview','toaster']);
 
 appModule.config(function (localStorageServiceProvider) {
     localStorageServiceProvider
@@ -40,3 +40,10 @@ appModule.config(function(FacebookProvider) {
 angular.element(document).ready(function() {
     console.log('document ready...');
 });
+
+appModule
+    .config(function($tabProvider) {
+        angular.extend($tabProvider.defaults, {
+            animation: 'am-flip-x'
+        });
+    });

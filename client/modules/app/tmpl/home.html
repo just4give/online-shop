@@ -1,9 +1,12 @@
 <div class="row">
-    <div class="col-sm-3">
-
+    <div class="col-sm-3 hidden-xs">
+        <div class="left-ads" ng-controller="adController">
+            <h3 class="title">{{slides[currentIndex].text1}}</h3>
+            <p>{{slides[currentIndex].text2}}</p>
+        </div>
     </div>
 
-    <div class="col-sm-9" ng-controller="CarouselDemoCtrl">
+    <div class="col-sm-9 col-xs-12" ng-controller="CarouselDemoCtrl">
         <div class="carousel-box">
             <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
                 <uib-slide ng-repeat="slide in slides" active="slide.active" class="row">
@@ -24,5 +27,6 @@
 
     </div>
     <!-- carousel slider -->
+    <ng-include src="'modules/search/tmpl/search.html'" ng-controller="searchController"></ng-include>
 
 </div>

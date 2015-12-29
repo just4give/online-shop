@@ -32,6 +32,18 @@ $secondary-band-color: green;
   @include no-active-focus;
 
 }
+.btn-opp-secondary{
+  color: white;
+  background-color: $menu-background-color;
+  border-color: $menu-background-color;
+  opacity: .8;
+  &:hover{
+    color: white;
+    opacity: 1;
+  }
+  @include no-active-focus;
+
+}
 .btn-opp-light{
   color: #635D5D;
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) repeat scroll 0 0;

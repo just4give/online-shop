@@ -18,6 +18,10 @@
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
@@ -27,4 +31,12 @@ input::-webkit-inner-spin-button {
 
 .navbar-inverse .navbar-toggle{
   border-color: transparent;
+}
+.nav-tabs>li>a{
+  color: black;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+  background-color: $menu-background-color;
+  font-weight: bold;
+  color: white;
 }

@@ -2,7 +2,8 @@ body{
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
   //background-color: $background-color;
-  color: #CCCCCC;
+  //color: #CCCCCC;
+  color: black;
 }
 
 .navbar-opp{
@@ -306,7 +307,10 @@ body{
 .ng-hide-remove.ng-hide-remove-active {
   opacity: 1;
 }*/
-
+.page-view{
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .ng-show{
   -webkit-animation:fadeIn .35s linear;
   -o-animation:fadeIn .35s linear;
@@ -392,5 +396,26 @@ body{
   }
   img{
     width: 100%;
+  }
+}
+.left-ads{
+  padding: 0px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border: 1px solid #E4DEDE;
+  background-color: white;
+  height: 300px;
+
+  .title{
+    background-color: #BF3835;
+    text-decoration: blink;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+  }
+  p{
+    color: black;
+    font-size: large;
+    padding: 10px;
   }
 }

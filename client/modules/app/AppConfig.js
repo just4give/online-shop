@@ -7,7 +7,11 @@ appModule.config(["$stateProvider","$urlRouterProvider", "$httpProvider",functio
          url: '/',
          templateUrl: 'modules/app/tmpl/home.html',
          controller: "HomeController"
-     }).state('upload', {
+     }).state('details', {
+            url: '/details/:id',
+            templateUrl: 'modules/search/tmpl/product-details.html',
+            controller:'productDetailsController'
+    }).state('upload', {
         url: '/upload',
         templateUrl: 'modules/upload/tmpl/upload-container.html',
         controller:"UploadController"

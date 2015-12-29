@@ -74,3 +74,66 @@
   color: white;
   border-color:  #3b5998;;
 }
+
+.product-details-modal{
+  color:black;
+  border-radius: 0px;
+  .modal-header{
+    padding: 5px;
+    border: 0px;
+    border-top: 5px solid $menu-background-color;
+    .modal-title{
+      text-transform: capitalize;
+      color:black;
+    }
+  }
+  .link{
+    font-weight: bolder;
+    color: black;
+    font-size: small;
+    &:hover{
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .product-image{
+    img{
+      width: 180px;
+      height: 200px;
+      overflow: hidden;
+    }
+  }
+  .reg-price{
+    color: black;
+  }
+  .sale-price{
+    color: red;
+    font-size: larger;
+    margin-bottom: 15px;
+  }
+  .modal-footer{
+    padding: 0px;
+
+
+  }
+  .product-detail-box{
+
+    border-left: 1px double gray;
+  }
+}
+
+.tab-pane.am-fade {
+  animation-duration: .3s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  opacity: 1;
+}
+
+.tab-pane.am-fade.active-remove {
+  display: none !important;
+}
+
+.tab-pane.am-fade.active-add {
+  animation-name: fadeIn;
+}

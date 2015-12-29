@@ -13,6 +13,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/angular/angular-csp.css" rel="stylesheet">
     <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendor/angularjs-toaster/toaster.min.css" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -23,6 +24,7 @@
     <div class="text-center">
       <div class="spinner" ng-hide="hideAppSpinner"></div>
     </div>
+
     <div  ng-show="appLoaded">
     <header class="top-header" style="display: none">
 
@@ -49,8 +51,8 @@
           <button class="btn btn-opp-primary " ng-click="openLoginPopup()" ng-hide="loggedIn"><i class="fa fa-sign-in"></i> Login</button>
 
           <div class="btn-group user-menu" ng-show="loggedIn">
-            <button type="button" class="btn btn-danger" ng-cloak>{{state.user.firstName}} {{state.user.lastName}} </button>
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-opp-primary" ng-cloak>{{state.user.firstName}} {{state.user.lastName}} </button>
+            <button type="button" class="btn btn-opp-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="caret"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
@@ -104,7 +106,7 @@
 
       </div>
     </nav>
-
+    <toaster-container></toaster-container>
     <div ui-view class="page-view"></div>
     </div>
   </body>
@@ -126,6 +128,7 @@
   <script src="vendor/ng-file-upload/ng-file-upload-all.min.js"></script>
   <script src="vendor/angular-facebook/lib/angular-facebook.js"></script>
   <script src="vendor/angular-inview/angular-inview.js"></script>
+  <script src="vendor/angularjs-toaster/toaster.min.js"></script>
 
   <script src="modules/app/AppModule.js"></script>
   <script src="modules/common/HTTPInterceptor.js"></script>
@@ -141,6 +144,9 @@
   <script src="modules/common/UserService.js"></script>
   <script src="modules/order/OrderService.js"></script>
   <script src="modules/common/ExceptionController.js"></script>
+  <script src="modules/search/SearchController.js"></script>
+  <script src="modules/common/AdController.js"></script>
+  <script src="modules/search/ProductDetailsController.js"></script>
 
 
 </html>
