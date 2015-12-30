@@ -1,38 +1,50 @@
 /**
  * Created by Mithun.Das on 12/8/2015.
  */
-var pool = require('./connectionPool');
-var uuid = require('node-uuid');
-var User = require('../orm/User');
-var Address = require('../orm/Address');
 
-exports.registerUser = function(user,callback){
 
-    User.findOne({where: {email: user.email}})
-        .then(function(data){
-            if(data == null){
-                var userUUID = uuid.v4();
-                User.create({
-                    uuid: userUUID,firstName:user.firstName, lastName: user.lastName, email:user.email, password:user.password,facebookId: user.facebookId
-                }).then(function(data){
+var User = require('../model/User');
 
-                    callback(null,data);
-                },function(err){
-                    callback(err);
-                    return;
-                })
-            }else{
-                callback(null,{errorCode:"102",errorMessage:"You already have account created with this email."});
+var crypto = require('crypto');
 
-            }
-        },function(err){
+exports.registerUser = function(formUser,callback){
+
+    User.findOne({email: formUser.email}, function(err, user){
+        if(err){
             console.log("Database error in loginUser: " + err);
             callback(err);
             return;
-        })
+        }
 
+        if(user == null){
+            var salt, hash;
+            salt = createSalt();
+            hash = hashPwd(salt, formUser.password);
+
+            var newUser = new User({
+                firstName:formUser.firstName,
+                lastName: formUser.lastName,
+                email:formUser.email,
+                password:hash,
+                salt: salt,
+                facebookId: formUser.facebookId
+            });
+            newUser.save(function(err){
+                if(err){
+                    console.log("Database error in loginUser: " + err);
+                    callback(err);
+                    return;
+                }
+                callback(null,{id: newUser._id,firstName: newUser.firstName, lastName: newUser.lastName,email:newUser.email });
+            });
+
+        }else{
+            callback(null,{errorCode:"102",errorMessage:"You already have account created with this email."});
+        }
+    })
 }
 
+/*
 exports.loginUser = function(user,callback){
 
     User.findOne({where: {email: user.email, password: user.password}})
@@ -209,4 +221,14 @@ exports.addresses = function(uuid,callback){
             callback(err);
             return;
         });
+}
+*/
+
+function createSalt() {
+    return crypto.randomBytes(128).toString('base64');
+}
+
+function hashPwd(salt, pwd) {
+    var hmac = crypto.createHmac('sha1', salt);
+    return hmac.update(pwd).digest('hex');
 }
