@@ -8,8 +8,8 @@
 }
 
 .btn-rect{
-  border-radius: 5px;
-  border: 1px solid #ccc8c8;
+  border-radius: 0px;
+  border: 0px;
 }
 
 .modal{
@@ -29,14 +29,25 @@ input::-webkit-inner-spin-button {
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-.navbar-inverse .navbar-toggle{
-  border-color: transparent;
+.navbar-header{
+  height: $header-height;
+  line-height: $header-height;
 }
-.nav-tabs>li>a{
-  color: black;
+
+.navbar-nav>li>a {
+
+  line-height: 50px;
+  font-size: large;
+  transition: all .5s ease-in-out;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0px;
+  margin-top: 15px;
+
+  &:hover{
+    cursor: pointer;
+    border-bottom: 2px solid red;
+  }
 }
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
-  background-color: $menu-background-color;
-  font-weight: bold;
-  color: white;
+.navbar-nav>.active>a{
+  border-bottom: 2px solid red;
 }

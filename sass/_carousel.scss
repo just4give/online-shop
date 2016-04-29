@@ -143,11 +143,9 @@ NAV
 //bootstrap ui carousel
 .carousel-box{
   //background: url("../images/bg1.png") no-repeat ;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+
   background-size: cover;
-  height: 300px;
+  height: $banner-height;
   .text-box{
     h3{
       color: black;
@@ -179,7 +177,8 @@ NAV
 .carousel-inner{
   img{
     margin:auto;
-    max-height: 300px
+    height: $banner-height;
+    width: 100%;
   }
 }
 .carousel-control{
@@ -187,4 +186,8 @@ NAV
 }
 .carousel-control.left,.carousel-control.right{
   background-image: none;
+}
+
+.carousel-box.bags{
+  background-color: red;
 }

@@ -1,49 +1,59 @@
 /**
  * Created by mithundas on 12/3/15.
  */
-var appModule = angular.module("photoOrder",['ui.router','ui.bootstrap','ngAnimate', 'ngTouch','mgcrea.ngStrap','angular-confirm',
-    'LocalStorageModule','ngFileUpload','facebook','angular-inview','toaster']);
+var appModule = angular.module("profile",['ui.router','ui.bootstrap','ngAnimate', 'ngTouch','angular-confirm',
+    'LocalStorageModule','headroom']);
 
 appModule.config(function (localStorageServiceProvider) {
     localStorageServiceProvider
         .setPrefix('photoOrder')
         .setStorageType('localStorage') //sessionStorage
         .setNotify(true, true)
-    console.log('storage config...');
+
 });
 
-appModule.run(["$interval","localStorageService", function($interval,localStorageService){
-    console.log('angular run...');
-    $interval(function(){
-        localStorageService.remove("cart");
-    },1000*60*10);
+appModule.run(["$interval","localStorageService","$rootScope", function($interval,localStorageService,$rootScope){
+//create a new instance
+    new WOW().init();
 
+    $rootScope.$on('$routeChangeStart', function (next, current) {
+        //when the view changes sync wow
+        new WOW().sync();
+    });
+
+    $(document).ready(function(){
+
+        if ( $(window).width() > 768) {
+            $('a').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top -80
+                }, 500);
+                event.preventDefault()
+            });
+        }
+        else {
+            $('a').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top -82
+                }, 500);
+                event.preventDefault()
+            });
+        }
+        /*
+         End Animate scroll code and add offset for header
+         */
+
+        /*
+         Fix to set selected nav option to class active
+         */
+        $('.nav li a').on('click', function() {
+            $(this).parent().parent().find('.active').removeClass('active');
+            $(this).parent().addClass('active');
+            $('.navbar-collapse').removeClass('in').addClass('collapse');
+        });
+
+    });
 }]);
 
-appModule.config(['$httpProvider', function($httpProvider) {
-    $httpProvider.defaults.useXDomain = true;
 
-    delete $httpProvider.defaults.headers.common["X-Requested-With"];
-    $httpProvider.defaults.headers.common["Accept"] = "application/json";
-    $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
-    console.log('http config...');
-}
-]);
 
-appModule.config(function(FacebookProvider) {
-    // Set your appId through the setAppId method or
-    // use the shortcut in the initialize method directly.
-    FacebookProvider.init('341307939406976');
-    console.log('fb config...');
-})
-
-angular.element(document).ready(function() {
-    console.log('document ready...');
-});
-
-appModule
-    .config(function($tabProvider) {
-        angular.extend($tabProvider.defaults, {
-            animation: 'am-flip-x'
-        });
-    });

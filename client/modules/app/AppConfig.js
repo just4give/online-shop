@@ -1,42 +1,27 @@
-appModule.config(["$stateProvider","$urlRouterProvider", "$httpProvider",function($stateProvider, $urlRouterProvider, $httpProvider) {
+appModule.config(["$stateProvider","$urlRouterProvider","$locationProvider",function($stateProvider, $urlRouterProvider,$locationProvider) {
     
 	$urlRouterProvider.otherwise('/');
+
     
     $stateProvider
       .state('/', {
          url: '/',
          templateUrl: 'modules/app/tmpl/home.html',
          controller: "HomeController"
-     }).state('details', {
-            url: '/details/:id',
-            templateUrl: 'modules/search/tmpl/product-details.html',
-            controller:'productDetailsController'
-    }).state('upload', {
-        url: '/upload',
-        templateUrl: 'modules/upload/tmpl/upload-container.html',
-        controller:"UploadController"
-    }).state('checkout', {
-            url: '/checkout',
-            templateUrl: 'modules/checkout/tmpl/checkout.html',
-            controller:"CheckoutController"
-    }).state('myorder', {
-            url: '/myorder',
-            templateUrl: 'modules/order/tmpl/my-order.html',
-            controller:"MyOrderController"
-    }).state('who', {
-        url: '/who',
-        templateUrl: 'modules/app/tmpl/who-we-are.html'
-    }).state('contact', {
-        url: '/contact',
-        templateUrl: 'modules/app/tmpl/contact-us.html',
-        controller: 'ContactController'
-    }).state('pricing', {
-        url: '/pricing',
-        templateUrl: 'modules/app/tmpl/pricing.html'
+     }).state('bagsandshoes', {
+        url: '/bagsandshoes',
+        templateUrl: 'modules/app/tmpl/bagsandshoes.html',
+        controller: "BagsController"
     })
-     ;
+    ;
 
-    $httpProvider.interceptors.push('httpInterceptor');
+    $locationProvider.html5Mode(true);
+
+
+    $locationProvider.hashPrefix('!');
+
+
+
 
     console.log('route config...');
         

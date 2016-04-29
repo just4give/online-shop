@@ -13,10 +13,30 @@ module.exports = function(grunt) {
 				files: '**/*.scss',
 				tasks: ['sass']
 			}
+		},
+		forever: {
+			server1: {
+				options: {
+					index: 'bin/www',
+					logDir: 'logs',
+					logFile:'log.out',
+					errFile:'error.out'
+				}
+			}
+
+
+		},
+		concurrent: {
+			options: {
+				logConcurrentOutput: true
+			},
+			tasks: ['forever:server1:start', 'watch']
 		}
 
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['watch']);
+	grunt.loadNpmTasks('grunt-concurrent');
+	grunt.loadNpmTasks('grunt-forever');
+	grunt.registerTask('dev',['concurrent']);
 }

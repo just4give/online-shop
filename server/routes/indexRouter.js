@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var app = express();
-var config = require('../database/config.json')[app.get('env')];
+
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Online Shop',apiContext: config.apiContext });
+router.get('*', function(req, res) {
+
+  res.render('index', { title: 'AppStackSolutions'});
 });
 
 module.exports = router;
