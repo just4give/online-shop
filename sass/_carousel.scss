@@ -189,5 +189,62 @@ NAV
 }
 
 .carousel-box.bags{
-  background-color: red;
+  background-color: transparent;
+  height: auto;
+  .carousel-inner{
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    img{
+      margin: auto;
+      height: auto;
+      width: 50%;
+      max-width: 500px;
+    }
+
+    .carousel-caption{
+      color: rgba(0,0,0,.5);
+      right: auto;
+      top:0;
+      text-shadow: none;
+      width: 40%;
+      p{
+        font-size: 40px;
+        padding-right: 15px;
+
+        //font-weight: bold;
+      }
+    }
+  }
+
+
+  .carousel-indicators li, .carousel-indicators .active{
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.features{
+
+  p{
+    font-size: 16px;
+  }
+  .p-feature{
+    font-size: 20px;
+    color:green;
+    font-weight: bold;
+  }
+.img-holder{
+  text-align: center;
+  img{
+    width: 30%;
+  }
+}
+
+  .img-holder2{
+    text-align: center;
+    img{
+      width: 80%;
+    }
+  }
 }

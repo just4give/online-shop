@@ -1,15 +1,181 @@
-<div class="row" >
+<div class="row" id="bagsandshoes">
     <div class="carousel-box bags">
         <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
             <uib-slide ng-repeat="slide in slides" active="slide.active" class="row">
                 <div >
-                    <img ng-src="{{slide.image}}" class="img-responsive">
+
                     <div class="carousel-caption">
-                        <h4>Slide {{slide.id}}</h4>
-                        <p>{{slide.text}}</p>
+                        <p ng-bind="slide.text"></p>
+
                     </div>
+                    <img ng-src="{{slide.image}}" class="img-responsive pull-right">
                 </div>
             </uib-slide>
         </uib-carousel>
     </div>
+</div>
+<hr>
+<div class="row features">
+    <div class="col-sm-6 col-xs-12">
+        <div class="img-holder wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
+            <img src="images/p4.png">
+        </div>
+
+
+
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <p class="p-feature wow bounceInRight" data-wow-delay="1s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Resonsive website design
+
+        </p>
+        <p class="wow bounceInRight" data-wow-delay="1s" data-wow-duration="2s">
+            Resonsive website which means your online store can be viewed on iPhone, iPad, Android Phone, Tables as well as desktops.
+            Your online store will render on different devices differently.
+
+        </p>
+
+        <p class="p-feature wow bounceInRight" data-wow-delay="1.2s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Customizable HTML templates
+        </p>
+        <p class="wow bounceInRight" data-wow-delay="1.2s" data-wow-duration="2s">
+            Bags & Shoes is just a sample online store backed by powerful REST APIs. That means HTML can be customized easily as per your
+            business requirements while reusing already built and tested backend code. And your business can be reachable to customers
+            in few days.
+        </p>
+
+        <p class="p-feature wow bounceInRight" data-wow-delay="1.4s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> SEO friendly url
+        </p>
+        <p class="wow bounceInRight" data-wow-delay="1.4s" data-wow-duration="2s">
+            Google search engine friendly urls makes sure your web pages are indexed by Google and appear on google search page.
+            SEO friendly urls are excellent for book marking and easy to remember by human brains.
+        </p>
+
+
+    </div>
+</div>
+<hr>
+<div class="row features">
+    <div class="col-sm-6 col-xs-12">
+        <p class="p-feature wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Rich Product Search Capability
+        </p>
+        <p class="wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
+            Rich and interactive product search experience loaded with facet search to narrow down search result. In built
+            pagination, sorting.
+        </p>
+
+
+        <p class="p-feature wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Easy sign-up with Facebook
+        </p>
+        <p class="wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="2s">
+            Online customers are lazy and even lazier when they are asked to create profile typing a bunch of information.
+            This app integrates facebook login to help buyers sign-up quickly.
+        </p>
+
+        <p class="p-feature wow bounceInLeft" data-wow-delay="1.4s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Integrated Email templates
+
+        </p>
+        <p class="wow bounceInLeft" data-wow-delay="1.4s" data-wow-duration="2s">
+            Built-in email templates which send emails to buyers when they sign-up, place order, order is shipped. Admin
+            receives emails when any order is placed or any refund/cancel is requested.
+
+        </p>
+    </div>
+
+    <div class="col-sm-6 col-xs-12">
+        <div class="img-holder wow bounceInRight" data-wow-delay="1s" data-wow-duration="2s">>
+            <img src="images/p7.png">
+        </div>
+    </div>
+
+</div>
+<hr>
+<div class="row features">
+
+
+    <div class="col-sm-6 col-xs-12">
+        <div class="img-holder wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">>
+            <img src="images/p8.png">
+        </div>
+
+    </div>
+
+    <div class="col-sm-6 col-xs-12">
+
+        <p class="p-feature wow bounceInRight" data-wow-delay="1s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Secured payments using Paypal SDK
+
+        </p>
+        <p class="wow bounceInRight" data-wow-delay="1s" data-wow-duration="2s">
+            We use paypal SDK to capture buyers payment securely. Your application can accept paypal payments as well as
+            any visa and master card.
+
+        </p>
+
+        <p class="p-feature wow bounceInRight" data-wow-delay="1.2s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Easy refund and cancel processing
+
+        </p>
+        <p class="wow bounceInRight" data-wow-delay="1.2s" data-wow-duration="2s">
+            Built-in order cancel and refund processing. Buyer can request cancel or refund online and admin can process
+            the request from admin panel. System sends email confirmation to buyers when request is processed.
+
+        </p>
+
+        <p class="p-feature wow bounceInRight" data-wow-delay="1.4s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Buyers Orders
+
+        </p>
+        <p class="wow bounceInRight" data-wow-delay="1.4s" data-wow-duration="2s">
+            Buyers can view and track their orders online. Buyers receive emails when order is placed and shipped. Buyers
+            can cancel entire order or individual items online from 'My Orders' page.
+
+        </p>
+
+
+    </div>
+
+</div>
+
+<hr>
+<div class="row features">
+    <div class="col-sm-6 col-xs-12">
+        <p class="p-feature wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Animated graphical admin panel
+        </p>
+        <p class="wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
+            Every time you login to admin panel, you will see your sales trend and most selling products graphically.
+            Dashboard will also indicate if any new order or refund requests were placed.
+        </p>
+
+
+        <p class="p-feature wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Configurable product catalog
+        </p>
+        <p class="wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="2s">
+            You as admin can configure your entire catalog. You can add new merchandise, new tax scheme, new shipping
+            methods. You can review all new orders, refund requests and process them.
+        </p>
+
+        <p class="p-feature wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
+            <i class="fa fa-check-square-o"></i> Promotional coupons and Marketing
+
+        </p>
+        <p class="wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
+            Promo and discounts are integral part of successful marketing of your business. We have in-built mechanism to
+            create promo codes and discounts which buyers can apply during checkout.
+
+        </p>
+    </div>
+
+    <div class="col-sm-6 col-xs-12">
+        <div class="img-holder2 wow bounceInRight" data-wow-delay="1.9s" data-wow-duration="2s">
+            <img src="images/p9.png">
+        </div>
+    </div>
+
 </div>

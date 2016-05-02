@@ -756,7 +756,44 @@ NAV
   background-image: none; }
 
 .carousel-box.bags {
-  background-color: red; }
+  background-color: transparent;
+  height: auto; }
+  .carousel-box.bags .carousel-inner {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px; }
+    .carousel-box.bags .carousel-inner img {
+      margin: auto;
+      height: auto;
+      width: 50%;
+      max-width: 500px; }
+    .carousel-box.bags .carousel-inner .carousel-caption {
+      color: rgba(0, 0, 0, 0.5);
+      right: auto;
+      top: 0;
+      text-shadow: none;
+      width: 40%; }
+      .carousel-box.bags .carousel-inner .carousel-caption p {
+        font-size: 40px;
+        padding-right: 15px; }
+  .carousel-box.bags .carousel-indicators li, .carousel-box.bags .carousel-indicators .active {
+    border-color: transparent;
+    background-color: transparent; }
+
+.features p {
+  font-size: 16px; }
+.features .p-feature {
+  font-size: 20px;
+  color: green;
+  font-weight: bold; }
+.features .img-holder {
+  text-align: center; }
+  .features .img-holder img {
+    width: 30%; }
+.features .img-holder2 {
+  text-align: center; }
+  .features .img-holder2 img {
+    width: 80%; }
 
 .gallery-container {
   margin-top: 10px;

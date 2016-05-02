@@ -4,16 +4,13 @@
 appModule.controller("BagsController",["$scope","$rootScope","$log","$modal","$state", "$interval","$timeout","$state","localStorageService",
     function($scope,$rootScope,$log,$modal,$state,$interval,$timeout,$state,localStorageService){
 
-    $rootScope.hideHeader = true;
+    //$rootScope.hideHeader = true;
 
-        $scope.myInterval = 5000;
+        $scope.myInterval = 7000;
         $scope.noWrapSlides = false;
-        var slides = $scope.slides = [ {image:'images/p1.png', text:"Stealing Deals on HD TVs. ",
-            text2:"Everyday is christmas. Find your perfect TV today.",
-            link:{text:"Buy", href:"/#/xyz"}},
-            {image:'images/p2.png', text:"Stealing Deals on HD TVs. ",
-                text2:"Everyday is christmas. Find your perfect TV today.",
-                link:{text:"Buy", href:"/#/xyz"}}
+        var slides = $scope.slides = [ {image:'images/p1.png', text:"Simple and elegent admin panel" },
+            {image:'images/p2.png', text:"Clean yet rich product search with filter, pagination and sort" },
+            {image:'images/p6.png', text:"Quick checkout using paypal or credit cards" }
         ];
 
 }]);

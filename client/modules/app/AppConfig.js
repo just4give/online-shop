@@ -1,15 +1,15 @@
 appModule.config(["$stateProvider","$urlRouterProvider","$locationProvider",function($stateProvider, $urlRouterProvider,$locationProvider) {
     
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('home');
 
     
     $stateProvider
-      .state('/', {
+      .state('home', {
          url: '/',
          templateUrl: 'modules/app/tmpl/home.html',
          controller: "HomeController"
      }).state('bagsandshoes', {
-        url: '/bagsandshoes',
+        url: '/bags-and-shoes',
         templateUrl: 'modules/app/tmpl/bagsandshoes.html',
         controller: "BagsController"
     })
