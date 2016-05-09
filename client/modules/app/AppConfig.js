@@ -12,6 +12,10 @@ appModule.config(["$stateProvider","$urlRouterProvider","$locationProvider",func
         url: '/bags-and-shoes',
         templateUrl: 'modules/app/tmpl/bagsandshoes.html',
         controller: "BagsController"
+    }).state('ecommerce', {
+        url: '/ecommerce',
+        templateUrl: 'modules/app/tmpl/bagsandshoes.html',
+        controller: "BagsController"
     })
     ;
 

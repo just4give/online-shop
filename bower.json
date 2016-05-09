@@ -33,6 +33,8 @@
     "animate.css": "~3.5.0",
     "angularjs-toaster": "~0.4.181",
     "wow": "wowjs#~1.1.2",
-    "headroom.js": "~0.7.0"
+    "headroom.js": "~0.7.0",
+    "angularjs-viewhead": "^0.0.1",
+    "angular-recaptcha": "^3.0.3"
   }
 }

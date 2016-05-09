@@ -9,5 +9,8 @@ appModule.controller("HomeController",["$scope","$rootScope","$log","$modal","$s
         $rootScope.hideHeader = false;
 
 
+    $rootScope.meta ={
+        desc:"AppStack Solutions. Software development startup company. AppStack Solutions is strong in LAMP MEAN AngularJS NodeJS"
+    }
 
 }]);

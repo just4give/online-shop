@@ -5,13 +5,16 @@ var path = require('path');
 var rootPath = path.normalize(__dirname + '/../../');
 
 module.exports = {
-    development: {
+    DEVELOPMENT: {
 
         rootPath: rootPath,
+        smtp: "smtps://noreply.techfcous@gmail.com:"+process.env.ADMIN_EMAIL_PWD+"@smtp.gmail.com",
+        adminEmail:"AppStackSolutions<noreply.techfcous@gmail.com>"
 
     },
-    production: {
+    PRODUCTION: {
         rootPath: rootPath,
-
+        smtp: "smtps://noreply.techfcous@gmail.com:"+process.env.ADMIN_EMAIL_PWD+"@smtp.gmail.com",
+        adminEmail:"AppStackSolutions<noreply.techfcous@gmail.com>"
     }
 }

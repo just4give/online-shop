@@ -617,6 +617,22 @@ body {
       color: black;
       font-size: large; }
 
+#ul-tasks li {
+  margin: 0 0 20px 0; }
+
+.price-card {
+  background-color: #f5f5f5; }
+  .price-card .header {
+    background-color: green;
+    text-align: center;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    font-size: x-large;
+    text-transform: uppercase; }
+  .price-card .body {
+    text-align: center; }
+
 .slider {
   height: 300px;
   overflow: hidden;
@@ -771,11 +787,15 @@ NAV
       color: rgba(0, 0, 0, 0.5);
       right: auto;
       top: 0;
+      left: 20px;
       text-shadow: none;
       width: 40%; }
       .carousel-box.bags .carousel-inner .carousel-caption p {
         font-size: 40px;
-        padding-right: 15px; }
+        padding-right: 15px;
+        color: green;
+        font-weight: bold;
+        text-transform: uppercase; }
   .carousel-box.bags .carousel-indicators li, .carousel-box.bags .carousel-indicators .active {
     border-color: transparent;
     background-color: transparent; }

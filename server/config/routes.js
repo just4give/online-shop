@@ -3,6 +3,8 @@
  */
 
 var routes = require('../routes/indexRouter');
+var contactRoutes = require('../routes/contactRouter');
+
 
 
 
@@ -16,6 +18,7 @@ module.exports = function(app) {
         next();
     });
     app.use('/', routes);
+    app.use('/api/contact', contactRoutes);
 
 
 
